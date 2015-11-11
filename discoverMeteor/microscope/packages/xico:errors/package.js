@@ -11,3 +11,10 @@ Package.on_use(function (api, where) {
 	if (api.export)
 		api.export('Errors');
 });
+
+Package.on_test(function(api) {
+	api.use('xico:errors', 'client');
+	api.use(['tinytest', 'test-helpers'], 'client');
+
+	api.add_files('errors_tests.js', 'client');
+});
