@@ -36,7 +36,7 @@ Router.route('/posts/:_id', {
 	name: 'postPage',
 	waitOn: function() {
 		return [
-			Meteor.subscribe('sinblePost', this.params._id),
+			Meteor.subscribe('singlePost', this.params._id),
 			Meteor.subscribe('comments', this.params._id)
 		];
 	},
