@@ -19,12 +19,14 @@ if(Meteor.isServer) {
 
       // sending emails to followers for this todo list
       followers.forEach(function(follower) {
-        Email.send({
-          from: "hello@todoapp.com",
-          to: follower,
-          subject: "New todo added",
-          text: "here's the todo item: " + title
-        });
+        Meteor.defer(function() {
+          Email.send({
+            from: "hello@todoapp.com",
+            to: follower,
+            subject: "New todo added",
+            text: "here's the todo item: " + title
+          });
+        }, 0);
       });
       
       var a =  Todos.insert({'title': title});
