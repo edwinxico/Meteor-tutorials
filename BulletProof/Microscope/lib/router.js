@@ -97,3 +97,9 @@ var requireLogin = function() {
 
 Router.onBeforeAction('dataNotFound', {only: 'postPage'});
 Router.onBeforeAction(requireLogin, {only: 'postSubmit'});
+
+if (Meteor.isServer) {
+  FastRender.route('/new/:limit?', function (params) {
+    this.subscribe('posts', {sort: {}, limit: params.limit})
+  });
+}
