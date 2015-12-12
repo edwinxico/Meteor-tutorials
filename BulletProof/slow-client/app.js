@@ -48,10 +48,6 @@ if(Meteor.isClient) {
   });
 
   Template.main.checkedState = function() {
-    // Ah ha! You found it. Remove this loop to fix the issue.
-    for(var lc=0; lc<20000; lc++) {
-      Random.id();
-    }
     return this.isDone? "checked": "";
   }
 
