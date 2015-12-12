@@ -26,3 +26,4 @@ check
 audit-argument-checks
 kadira:debug
 meteorhacks:subs-manager
+meteorhacks:fast-render
