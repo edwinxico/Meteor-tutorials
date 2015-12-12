@@ -1,5 +1,6 @@
 Meteor.methods({
   trackLocation: function() {
+  	this.unblock();
     // assume this is a legitimate method which will
     // invoke an API call and get more details about the 
     // Geo location from IP
