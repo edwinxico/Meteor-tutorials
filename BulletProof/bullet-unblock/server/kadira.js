@@ -1,2 +1,1 @@
-// Enter correct appId and appSecret
-// Kadira.connect('<appId>', '<appSecret>')
+Kadira.connect("w69svWrtEYZ879znF", "ec7396b9-2773-460e-9fdb-dbb5e1a714f2");
